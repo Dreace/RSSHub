@@ -244,6 +244,12 @@ pageClass: routes
 
 <Route author="sfyumi" example="/eleduck/jobs" path="/eleduck/jobs"/>
 
+## 恩山无线论坛
+
+### 板块
+
+<Route author="nczitzk" example="/right/forum/31" path="/right/forum/:id?" :paramsDesc="['板块 id，可在板块页 URL 中找到']"/>
+
 ## 光谷社区
 
 ### 子论坛
@@ -368,15 +374,15 @@ pageClass: routes
 
 ### 主题帖（板块）
 
-<Route author="WooMai" example="/liyuan-forums/threads/forum/:forum_id" path="/liyuan-forums/threads/forum/1" :paramsDesc="['板块 ID']" />
+<Route author="WooMai" example="/liyuan-forums/threads/forum/1" path="/liyuan-forums/threads/forum/:forum_id" :paramsDesc="['板块 ID, 支持多个, 使用英文逗号分隔']" />
 
 ### 主题帖（专题）
 
-<Route author="WooMai" example="/liyuan-forums/threads/topic/:topic_id" path="/liyuan-forums/threads/topic/1" :paramsDesc="['专题 ID']" />
+<Route author="WooMai" example="/liyuan-forums/threads/topic/1" path="/liyuan-forums/threads/topic/:topic_id" :paramsDesc="['专题 ID, 支持多个, 使用英文逗号分隔']" />
 
 ### 主题帖（用户）
 
-<Route author="WooMai" example="/liyuan-forums/threads/user/:user_id" path="/liyuan-forums/threads/user/1" :paramsDesc="['用户 ID, 仅支持数字 ID']" />
+<Route author="WooMai" example="/liyuan-forums/threads/user/1" path="/liyuan-forums/threads/user/:user_id" :paramsDesc="['用户 ID (仅支持数字 ID), 支持多个, 使用英文逗号分隔']" />
 
 ## 龙空
 
@@ -390,13 +396,13 @@ pageClass: routes
 
 ## 龙腾网
 
-### 转译网贴
+### 网帖翻译
 
-<Route author="sgqy" example="/ltaaa" path="/ltaaa/:type?" :paramsDesc="['热门类型.']">
+<Route author="sgqy nczitzk" example="/ltaaa" path="/ltaaa/:category?" :paramsDesc="['分类，见下表，默认为最新']">
 
-| 最新 | 每周 | 每月  | 全年 |
-| ---- | ---- | ----- | ---- |
-| (空) | week | month | year |
+| 最新   | 科技       | 娱乐  | 文化    | 社会      | 体育  | 历史    | 趣闻        | 图说世界 |
+| ------ | ---------- | ----- | ------- | --------- | ----- | ------- | ----------- | -------- |
+| latest | technology | funny | culture | community | sport | history | curiosities | picture  |
 
 </Route>
 
